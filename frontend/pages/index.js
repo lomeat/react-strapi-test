@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function IndexPage() {
   const click = () => {
-    console.log("hello there");
+    console.log("hello another world");
   };
 
   return (
