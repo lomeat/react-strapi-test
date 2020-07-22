@@ -9,25 +9,21 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "ReleaseDate": {
+    "releaseDate": {
       "type": "date",
       "default": "2020-07-01T09:00:00.000Z",
       "required": false
     },
-    "Poster": {
+    "poster": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false
     }
