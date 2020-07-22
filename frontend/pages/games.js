@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 
 import { Wrapper } from "../style";
+import { Item } from "../components/Item";
 
 export default function GamesPage() {
   const [games, setGames] = useState([]);
@@ -33,7 +34,7 @@ export default function GamesPage() {
         </div>
         <List>
           {games.map((game) => (
-            <Item key={game.id} game={game} />
+            <Item key={game.id} {...game} />
           ))}
         </List>
       </Wrapper>
@@ -48,16 +49,3 @@ const List = styled.div`
   grid-template-rows: 1fr 1fr;
   gap: 40px;
 `;
-
-const Item = ({ game }) => {
-  console.log(game);
-
-  return (
-    <>
-      <h1>{game.title}</h1>
-      <p>{game.description}</p>
-      <h3>{game.releaseDate}</h3>
-      <img src={game.poster.name}></img>
-    </>
-  );
-};
